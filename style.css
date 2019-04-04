@@ -1,0 +1,80 @@
+
+
+
+
+  .container {
+    
+    padding: 30px;
+    background-size: contain;
+    height: 100%;
+    background-image: url(game-bg.jpg);
+
+}
+
+
+  .container2 {
+      grid-area: t;
+      text-align: center;
+      padding: 30px;
+      margin: auto;
+      border-radius: 20px;
+      background-color:rgb(255, 255, 255);
+  }
+
+
+
+  
+.title  {
+    grid-area: title;
+    color:#f31596;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 26px;
+   
+}
+
+.button {
+    grid-area: button;
+    display: inline-block;
+    text-align: center;
+    background-color:transparent;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+
+}
+
+
+
+.center {
+    text-align: center;
+}
+.score {
+    text-align: center;
+    margin: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 40px;
+    color:#3d3d3d;
+    grid-area: result;
+}
+
+.joueur {
+    text-align: center;
+    margin: 20px 5px 20px 5px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    color:#f31596;
+}
+
+
+@media screen and (max-width: 599px)
+{
+  
+  .container2 {
+    text-align: center;
+    width:80%;
+    margin: auto;
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+    
+}
+}
