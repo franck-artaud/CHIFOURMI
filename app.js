@@ -1,7 +1,17 @@
-const buttons = document.querySelectorAll("button");
-const scoreJoueur = 0 ;
-const scoreJoueurR = (scoreJoueur + 1);
-const scoreOrdi = 0;
+
+let scoreJoueur = 0;
+let scoreOrdi = 0;
+
+const scoreJoueur_span = document.getElementById("scoreJoueur");
+const scoreOrdi_span = document.getElementById("scoreOrdi");
+
+
+
+
+
+
+const buttons = document.getElementsByClassName("value");
+
 // console.log(buttons);
 // On emarque que la console nous donne une NodeList
 
@@ -17,16 +27,33 @@ for (let i = 0; i < buttons.length; i++) {
 
         if (joueur === robot) {
             resultat = "Egalité";
+            
         }
-        else if ((joueur === "Pierre" && robot === "Ciseaux")
-        || (joueur === "Feuille" && robot === "Pierre")
-        || (joueur === "Ciseaux" && robot ==="Feuille")) {
+        else if ((joueur === "Pierre " && robot === "Ciseaux ")
+        || (joueur === "Feuille " && robot === "Pierre ")
+        || (joueur === "Ciseaux " && robot ==="Feuille ")) {
             resultat = "T'as gagné mon pote";
+            scoreJoueur++;
+            scoreJoueur_span.innerHTML = document.getElementById(scoreJoueur);
+            scoreJoueur_span.innerHTML = scoreJoueur;
+
+    
+
+           
+            // scoreJoueur_span.innerHTML = getElementById("#scoreJoueur");
+
         }
         else {
             resultat = "Whaouu la loooose !!!";
+            scoreOrdi++;
+            scoreOrdi_span.innerHTML = document.getElementById("scoreOrdi");
+            scoreOrdi_span.innerHTML = scoreOrdi;
+
+           
+            // scoreOrdi_span.innerHTML = getElementById("#scoreOrdi");
+
         }
-            console.log(resultat);
+           
             document.querySelector(".resultat").innerHTML =
             `<div class="joueur">
             Toi : ${joueur} <br/>
@@ -34,17 +61,6 @@ for (let i = 0; i < buttons.length; i++) {
             
             <div class="score">
             ${resultat}
-            </div> 
-
-            <div class="compteur">
-
-            Toi: ${scoreJoueur} ${scoreJoueurR}
             </div> `;
-            
-            // <div class="compteur">
-            // Toi : ${scoreJoueur} <span> ${scoreJoueur +1} </span>
-            // Ordi : ${sscoreOrdi} <span> ${scoreOrdi +1} </span>
-            // </div>
-
     });
 }
